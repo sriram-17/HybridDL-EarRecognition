@@ -40,21 +40,21 @@ The dataset is organized into `train` and `test` folders. Each folder includes:
    - The training dataset contains 3000 images; the test dataset contains 630 images.
    - The Adam optimizer is used to minimize the mean squared error loss.
    - Mathematical formulation of the Adam optimizer:
-     - **Weight Update Formula:**
-       \[
-       \epsilon_{(θ+1)} = \epsilon_θ - \frac{\gamma_θ}{(\vartheta_θ + \epsilon)^{1/2}} \left[\frac{\delta L}{\delta \epsilon_θ}\right]
-       \]
-     - **Gradient Update:**
-       \[
-       \vartheta_t = \sigma \vartheta_{(θ-1)} + (1 - \sigma) \left[\frac{\delta L}{\delta \mu_θ}\right]^2
-       \]
-     Where:
-     - \(\epsilon_θ\) and \(\epsilon_{(θ+1)}\) are the weights at time intervals θ and θ+1.
-     - \(\gamma_θ\) is the learning rate.
-     - \(\sigma\) is the moving average parameter.
-     - \(\delta L\) is the derivative of the loss function.
-     - \(\vartheta_t\) is the sum of past gradient squares.
-     - \(\epsilon\) is a small positive constant.
+     - The Adam optimizer updates weights and slopes using the following equations:
+		1. **Update Weights:**
+			$$\epsilon_{(\theta+1)} = \epsilon_\theta - \gamma_\theta \mu_\theta$$
+		2. **Update Sum of Slopes:**
+			$$\mu_\theta = \sigma \mu_{(\theta-1)} + (1 - \sigma) \frac{\delta L}{\delta \mu_\theta}$$
+		where:
+		- \( \mu_\theta \) represents the sum of slopes over time interval \( \theta \).
+		- \( \mu_{(\theta-1)} \) represents the sum of slopes over time interval \( \theta - 1 \).
+		- \( \epsilon_\theta \) represents the weights at time interval \( \theta \).
+		- \( \epsilon_{(\theta+1)} \) represents the weights at time interval \( \theta + 1 \).
+		- \( \gamma_\theta \) represents the learning rate at time interval \( \theta \).
+		- \( \sigma \) represents the moving average parameter.
+		- \( \delta L \) represents the derivative of the loss function.
+		- \( \delta \mu_\theta \) represents the derivative of weights at time \( \theta \).
+
 
 **Feature Points Extraction:**
 - The model identifies and plots landmark points on ear images.
