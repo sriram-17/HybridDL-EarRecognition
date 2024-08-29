@@ -45,15 +45,16 @@ The dataset is organized into `train` and `test` folders. Each folder includes:
 			$$\epsilon_{(\theta+1)} = \epsilon_\theta - \gamma_\theta \mu_\theta$$
 		2. **Update Sum of Slopes:**
 			$$\mu_\theta = \sigma \mu_{(\theta-1)} + (1 - \sigma) \frac{\delta L}{\delta \mu_\theta}$$
+
 		where:
-		- \( \mu_\theta \) represents the sum of slopes over time interval \( \theta \).
-		- \( \mu_{(\theta-1)} \) represents the sum of slopes over time interval \( \theta - 1 \).
-		- \( \epsilon_\theta \) represents the weights at time interval \( \theta \).
-		- \( \epsilon_{(\theta+1)} \) represents the weights at time interval \( \theta + 1 \).
-		- \( \gamma_\theta \) represents the learning rate at time interval \( \theta \).
-		- \( \sigma \) represents the moving average parameter.
-		- \( \delta L \) represents the derivative of the loss function.
-		- \( \delta \mu_\theta \) represents the derivative of weights at time \( \theta \).
+		 - \( \mu_\theta \) represents the sum of slopes over time interval \( \theta \).
+		 - \( \mu_{(\theta-1)} \) represents the sum of slopes over time interval \( \theta - 1 \).
+		 - \( \epsilon_\theta \) represents the weights at time interval \( \theta \).
+		 - \( \epsilon_{(\theta+1)} \) represents the weights at time interval \( \theta + 1 \).
+		 - \( \gamma_\theta \) represents the learning rate at time interval \( \theta \).
+		 - \( \sigma \) represents the moving average parameter.
+		 - \( \delta L \) represents the derivative of the loss function.
+		 - \( \delta \mu_\theta \) represents the derivative of weights at time \( \theta \).
 
 
 **Feature Points Extraction:**
