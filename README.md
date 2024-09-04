@@ -88,11 +88,18 @@ The model successfully identifies and plots feature points on ear images, demons
 
 **Accuracy:**
 - The model achieved an accuracy of 90.22%.
-- Accuracy Graph: ![Accuracy Graph](images/accuracy_graph.png)
-- Loss Graph: ![Loss Graph](images/loss_graph.png)
+- Accuracy Graph:
+
+![Accuracy Graph](images/accuracy_graph.png)
+- Loss Graph:
+
+  ![Loss Graph](images/loss_graph.png)
 
 **Landmark Points Placed:**
-- Landmark Points plotted on ear: ![landmark Points](images/landmark_plotted_ear.png)
+- Landmark Points plotted on ear:
+
+   ![landmark Points](images/landmark_plotted_ear.png)
+  
 ## Conclusions and Future Work
 
 The proposed deep learning model effectively extracts and utilizes landmark points for ear biometric identification. The accuracy of feature extraction shows significant improvement compared to other models. Future work will focus on increasing model accuracy through enhanced training and exploring its potential for individual identification.
